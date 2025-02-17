@@ -33,7 +33,7 @@ const FilesDisplay = () => {
         // Fetch files
         
         // console.log(file);
-        axios.post('http://localhost:7000/api/fetchdata', { category, fileName })
+        axios.post('https://back-c-seven.vercel.app/api/fetchdata', { category, fileName })
             .then((response) => {
                 console.log(response.data);
                 setFiles(response.data || []);
@@ -65,7 +65,7 @@ const FilesDisplay = () => {
         if (!isAdmin) return;
         try {
             console.log("Deleting file with ID:", fileId);
-            const response = await axios.delete(`http://localhost:7000/api/delete/${fileId}`);
+            const response = await axios.delete(`https://back-c-seven.vercel.app/api/delete/${fileId}`);
             console.log(response.data.message);
             setFiles(files.filter(file => file.id !== fileId));
         } catch (error) {
@@ -86,7 +86,7 @@ const FilesDisplay = () => {
         setIsUploading(true); // Set uploading state to true
     
         try {
-            const response = await axios.post("http://localhost:7000/api/upload", formData, {
+            const response = await axios.post("https://back-c-seven.vercel.app/api/upload", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },

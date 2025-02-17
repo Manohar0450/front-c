@@ -15,7 +15,7 @@ const AdminLogin = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:7000/api/adminlogin", { username, password })
+        axios.post("https://back-c-seven.vercel.app/api/adminlogin", { username, password })
             .then((response) => {
                 if (response.data.message === "Login Successfull") {
                     setValid(true);

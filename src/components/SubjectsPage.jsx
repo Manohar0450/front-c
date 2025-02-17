@@ -10,7 +10,7 @@ const SubjectsPage = () => {
 
   // Fetch files based on the semester when the component mounts
   useEffect(() => {
-    axios.post('http://localhost:7000/api/fetchsubjects', { Link: semester })
+    axios.post('https://back-c-seven.vercel.app/api/fetchsubjects', { Link: semester })
       .then((response) => {
         setFiles(response.data);
       })

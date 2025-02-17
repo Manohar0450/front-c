@@ -33,7 +33,7 @@ const ChangeUserName = () => {
                 Password : Password,
                 ChangeUserName: ChangedUserName
             }
-            axios.post("http://localhost:7000/api/changeusername", ChangeDetails)
+            axios.post("https://back-c-seven.vercel.app/api/changeusername", ChangeDetails)
                 .then((response) => {
                     if (response.data.message === "UserName Changed Successfully") {
                         setValid(true);

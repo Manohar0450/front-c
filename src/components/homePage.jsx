@@ -12,7 +12,7 @@ const HomePage = () => {
   // Function to handle Subject links click
   const handleLinkClick = async (semesterLink) => {
     try {
-      const response = await axios.post('http://localhost:7000/api/fetchsubjects', { Link: semesterLink });
+      const response = await axios.post('https://back-c-seven.vercel.app/api/fetchsubjects', { Link: semesterLink });
       setFiles(response.data);
       setSelectedSemester(semesterLink); // Store selected semester
       navigate(`/files/${semesterLink}`); // Navigate to the files display page with semester link

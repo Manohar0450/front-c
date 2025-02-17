@@ -33,7 +33,7 @@ const ChangePassword = () => {
                 MainPassword : Mainpassword,
                 ChangePassword: Changedpassword
             }
-            axios.post("http://localhost:7000/api/changepassword", ChangeDetails)
+            axios.post("https://back-c-seven.vercel.app/api/changepassword", ChangeDetails)
                 .then((response) => {
                     if (response.data.message === "Password Changed Successfully") {
                         setValid(true);
