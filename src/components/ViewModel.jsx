@@ -1,5 +1,5 @@
 import React from "react";
-import "./viewModel.css";
+import "./ViewModel.css";
 import { IoIosClose } from "react-icons/io";
 
 const ViewModel = ({ isOpen, onClose, contentUrl }) => {
