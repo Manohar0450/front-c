@@ -4,7 +4,6 @@ import { IoIosClose } from "react-icons/io";
 
 const ViewModel = ({ isOpen, onClose, contentUrl }) => {
   if (!isOpen) return null; // Render nothing if the modal is closed
-
   return (
     <div className="ViewModel">
       <div className="ViewModelContent">
@@ -20,5 +19,4 @@ const ViewModel = ({ isOpen, onClose, contentUrl }) => {
     </div>
   );
 };
-
 export default ViewModel;
